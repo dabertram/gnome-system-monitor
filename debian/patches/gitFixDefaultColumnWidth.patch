@@ -1,0 +1,55 @@
+Description: Fixes the default column width for the Virtual Memory, Shared Memory, and Started columns as they otherwise do not show even when enabled
+Origin: upstream, https://bugzilla.gnome.org/attachment.cgi?id=331447
+Bug: https://bugzilla.gnome.org/show_bug.cgi?id=768063 
+Bug-Ubuntu: https://bugs.launchpad.net/bugs/1581229
+---
+This patch header follows DEP-3: http://dep.debian.net/deps/dep3/
+Index: gnome-system-monitor-3.20.1/src/org.gnome.gnome-system-monitor.gschema.xml.in.in
+===================================================================
+--- gnome-system-monitor-3.20.1.orig/src/org.gnome.gnome-system-monitor.gschema.xml.in.in
++++ gnome-system-monitor-3.20.1/src/org.gnome.gnome-system-monitor.gschema.xml.in.in
+@@ -213,7 +213,7 @@
+     </key>
+ 
+     <key name="col-3-width" type="i">
+-      <default>0
++      <default>50
+       </default>
+       <_summary>Width of process 'Virtual Memory' column
+       </_summary>
+@@ -241,7 +241,7 @@
+     </key>
+ 
+     <key name="col-5-width" type="i">
+-      <default>0
++      <default>80
+       </default>
+       <_summary>Width of process 'Writable Memory' column
+       </_summary>
+@@ -255,7 +255,7 @@
+     </key>
+ 
+     <key name="col-6-width" type="i">
+-      <default>0
++      <default>50
+       </default>
+       <_summary>Width of process 'Shared Memory' column
+       </_summary>
+@@ -269,7 +269,7 @@
+     </key>
+ 
+     <key name="col-7-width" type="i">
+-      <default>0
++      <default>80
+       </default>
+       <_summary>Width of process 'X Server Memory' column
+       </_summary>
+@@ -311,7 +311,7 @@
+     </key>
+ 
+     <key name="col-10-width" type="i">
+-      <default>0
++      <default>50
+       </default>
+       <_summary>Width of process 'Started' column
+       </_summary>
